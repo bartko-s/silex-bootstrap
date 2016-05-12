@@ -1,0 +1,33 @@
+{
+    "name": "stefano/silex-bootstrap",
+    "config": {
+        "vendor-dir": "server/vendor"
+    },
+    "require": {
+        "silex/silex": "~1.3",
+        "twig/twig": "^1.24",
+        "symfony/twig-bridge": "^3.0",
+        "symfony/validator": "^3.0",
+        "symfony/form": "^3.0",
+        "symfony/config": "^3.0",
+        "symfony/translation": "^3.0",
+        "symfony/security-csrf": "^3.0",
+        "swiftmailer/swiftmailer": "^5.4",
+        "monolog/monolog": "^1.19",
+        "doctrine/dbal": "~2.2",
+        "simple-bus/message-bus": "^2.2"
+    },
+    "require-dev": {
+        "silex/web-profiler": "^1.0",
+        "sorien/silex-dbal-profiler": "~1.1",
+        "symfony/monolog-bridge": "^3.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "App\\": "server/src/"
+        },
+        "classmap": [
+            "server/src/"
+        ]
+    }
+}

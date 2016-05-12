@@ -1,0 +1,9 @@
+composer.phar
+/vendor/
+/composer.lock
+/server/cache/*
+!/server/cache/*.dummy
+/server/logs/*
+!/server/logs/*.dummy
+/server/vendor
+/server/config/*local.php
