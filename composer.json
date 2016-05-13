@@ -3,7 +3,8 @@
     "description": "",
     "license": "BSD-3-Clause",
     "config": {
-        "vendor-dir": "server/vendor"
+        "vendor-dir": "server/vendor",
+        "process-timeout": 0
     },
     "require": {
         "silex/silex": "~1.3",
