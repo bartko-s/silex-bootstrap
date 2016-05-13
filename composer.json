@@ -41,19 +41,23 @@
         }
     },
     "scripts": {
-        "run-server": [
+        "run-dev-server": [
+            "@clear-application-cache",
             "php -S 127.0.0.1:5000 r.php"
         ],
         "clear-application-cache": [
             "find server/cache ! -name '.dummy' ! -path 'server/cache' -exec rm -fr {} +"
         ],
         "test": [
+            "@clear-application-cache",
             "server/vendor/bin/phpunit --configuration server/tests/phpunit.xml"
         ],
         "test-unit": [
+            "@clear-application-cache",
             "server/vendor/bin/phpunit --configuration server/tests/phpunit.xml --testsuite unit"
         ],
         "test-integration": [
+            "@clear-application-cache",
             "server/vendor/bin/phpunit --configuration server/tests/phpunit.xml --testsuite integration"
         ]
     }
