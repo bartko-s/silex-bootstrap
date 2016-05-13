@@ -14,4 +14,4 @@ if(!defined('APPLICATION_ENVIRONMENT')) {
 }
 
 $app = new AppBootstrap(APPLICATION_ENVIRONMENT);
-$app->run();
+$app->getConfiguredApplication()->run();

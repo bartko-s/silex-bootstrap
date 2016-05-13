@@ -22,6 +22,8 @@ class AppBootstrap
 
     private $_config = array();
 
+    private $_boot = false;
+
     /**
      * @param $env string
      */
@@ -106,10 +108,17 @@ class AppBootstrap
         }
     }
 
-    public function run() {
-        $this->_registerProvides();
-        $this->_setApplicationConfig();
-        
-        $this->_app->run();
+    /**
+     * @return App
+     */
+    public function getConfiguredApplication() {
+        if(!$this->_boot) {
+            $this->_registerProvides();
+            $this->_setApplicationConfig();
+
+            $this->_boot = true;
+        }
+
+        return $this->_app;
     }
 }

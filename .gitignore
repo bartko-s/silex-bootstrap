@@ -7,3 +7,4 @@ composer.phar
 !/server/logs/*.dummy
 /server/vendor
 /server/config/*local.php
+/server/tests/temp
