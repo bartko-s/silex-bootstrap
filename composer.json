@@ -60,6 +60,9 @@
         "test-integration": [
             "@clear-application-cache",
             "server/vendor/bin/phpunit --configuration server/tests/phpunit.xml --testsuite integration"
+        ],
+        "optimize-autoloader": [
+            "composer dumpautoload -o"
         ]
     }
 }
