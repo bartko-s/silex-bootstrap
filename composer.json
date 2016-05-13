@@ -44,6 +44,9 @@
         "run-server": [
             "php -S 127.0.0.1:5000 r.php"
         ],
+        "clear-application-cache": [
+            "find server/cache ! -name '.dummy' ! -path 'server/cache' -exec rm -fr {} +"
+        ],
         "test": [
             "server/vendor/bin/phpunit --configuration server/tests/phpunit.xml"
         ],
