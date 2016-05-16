@@ -44,7 +44,7 @@
     "scripts": {
         "run-dev-server": [
             "@clear-application-cache",
-            "php -S 127.0.0.1:5000 r.php"
+            "php -S 127.0.0.1:5000 server/dev-router.php"
         ],
         "clear-application-cache": [
             "find server/cache ! -name '.dummy' ! -path 'server/cache' -exec rm -fr {} +"
